@@ -484,7 +484,8 @@ class Parser {
 		SignatureValidatorFactory $signatureValidatorFactory,
 		UserNameUtils $userNameUtils
 	) {
-		$this->deprecateDynamicPropertiesAccess( '1.42', __CLASS__ );
+		// T362692: temporarily disable deprecation warnings
+		// $this->deprecateDynamicPropertiesAccess( '1.42', __CLASS__ );
 		$this->deprecatePublicProperty( 'ot', '1.35', __CLASS__ );
 		$this->deprecatePublicProperty( 'mTitle', '1.35', __CLASS__ );
 		$this->deprecatePublicProperty( 'mOptions', '1.35', __CLASS__ );
