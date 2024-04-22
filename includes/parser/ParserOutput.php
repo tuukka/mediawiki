@@ -2803,7 +2803,7 @@ class ParserOutput extends CacheTime implements ContentMetadataCollector {
 			}
 		}
 		$this->mProperties = self::detectAndDecodeBinary( $jsonData['Properties'] );
-		$this->mTOCHTML = $jsonData['TOCHTML'];
+		$this->mTOCHTML = $jsonData['TOCHTML'] ?? ''; // T363107
 		$this->mTimestamp = $jsonData['Timestamp'];
 		$this->mEnableOOUI = $jsonData['EnableOOUI'];
 		$this->setIndexPolicy( $jsonData['IndexPolicy'] );
